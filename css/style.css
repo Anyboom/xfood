@@ -1,6 +1,6 @@
 /* XFOOD Store — редизайн в пластике референсов (alt + dodobrands):
    кремовый фон, жирный гротеск Onest, панельные радиусы, пилюли,
-   счётчики в герое и бегущая лента. Палитра XFOOD: тёплый томат
+   закреплённый низ карточек. Палитра XFOOD: тёплый томат
    и тёмный шоколад — «пицца в осеннем свете», без кислотных акцентов. */
 
 /* ===== tokens ===== */
@@ -214,33 +214,6 @@ h1 { font-size: var(--fs-h1); letter-spacing: -0.03em; line-height: 1.02; }
 }
 .hero__ghost:hover { color: #fff; border-color: var(--peach); }
 
-/* лента витрины: бегущая строка по нижней кромке баннера */
-.hero__ticker {
-  border-top: 1px solid rgba(246, 240, 230, 0.16);
-  background: rgba(43, 23, 16, 0.35);
-}
-.ticker__wrap { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2rem); padding-block: 0.9rem; }
-.ticker__tag { flex: none; font-size: 0.8125rem; font-weight: 700; color: var(--cream-dim); white-space: nowrap; }
-.ticker__viewport {
-  flex: 1; min-width: 0; overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
-}
-.ticker__track { display: flex; width: max-content; animation: ticker 46s linear infinite; }
-.hero__ticker:hover .ticker__track { animation-play-state: paused; }
-.ticker__group { display: flex; align-items: center; }
-.ticker__item {
-  display: inline-flex; align-items: baseline; white-space: nowrap;
-  font-size: 0.9375rem; color: var(--cream-dim);
-}
-.ticker__item::after {
-  content: ""; flex: none; align-self: center;
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--accent-bright);
-  margin-inline: 1.6em;
-}
-@keyframes ticker { to { transform: translateX(-50%); } }
-
 /* ===== sections common ===== */
 section { scroll-margin-top: 2rem; }
 main > section:not(.hero) { padding-block: var(--section-block); }
@@ -332,19 +305,29 @@ main > section:not(.hero) { padding-block: var(--section-block); }
 .product__body {
   padding: clamp(1.1rem, 2.5vw, 1.5rem);
   padding-top: clamp(1.25rem, 2.5vw, 1.6rem);
-  display: grid; gap: 0.65rem; align-content: start;
+  display: flex; flex-direction: column; gap: 0.65rem;
   flex: 1;
 }
 .product__title { font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.28; }
-.product__price { font-size: 1.375rem; font-weight: 800; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.product__price { margin-top: auto; font-size: 1.375rem; font-weight: 800; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
 .coin { color: var(--accent); font-weight: 800; }
-.product__sizes { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.product__sizes li {
-  background: var(--tint); color: var(--tint-ink);
-  font-size: 0.8125rem; font-weight: 600;
-  padding: 0.42em 0.8em; border-radius: var(--radius);
-  white-space: nowrap;
+.product__sizes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
+.product__single {
+  margin-top: 0.25rem; min-height: 44px;
+  display: flex; align-items: center;
+  color: var(--muted); font-size: 0.875rem; font-weight: 500;
 }
+.size {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 0 0.65em;
+  background: var(--tint); color: var(--tint-ink);
+  border: 0; border-radius: 999px;
+  font: inherit; font-size: 0.8125rem; font-weight: 600;
+  white-space: nowrap; cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.size:hover { background: #ecdfc4; color: var(--deep); }
+.size[aria-pressed="true"] { background: var(--accent); color: #fff; font-weight: 700; }
 .product__link {
   display: inline-flex; align-items: center; gap: 0.4em;
   margin-top: 0.35rem;
@@ -353,8 +336,8 @@ main > section:not(.hero) { padding-block: var(--section-block); }
   transition: color 0.18s ease;
 }
 .product__link:hover { color: var(--accent); }
-.product__link span { transition: transform 0.2s ease; }
-.product__link:hover span { transform: translateX(4px); }
+.product__link .arrow { transition: transform 0.2s ease; }
+.product__link:hover .arrow { transform: translateX(4px); }
 
 /* стаггер появления карточек */
 .catalog__grid > li:nth-child(4n+2) { --d: 70ms; }
@@ -492,8 +475,6 @@ main > section:not(.hero) { padding-block: var(--section-block); }
 
   .hero__inner { padding-top: clamp(7rem, 18vh, 9.5rem); }
 
-  .ticker__tag { display: none; }
-
   .collection-panel { grid-template-columns: 1fr; }
   .collection__media { order: -1; min-height: 0; aspect-ratio: 3 / 2; }
   .collection__media img { height: 100%; }
@@ -535,9 +516,7 @@ main > section:not(.hero) { padding-block: var(--section-block); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .btn, .pill, .filter, .product, .product__media img, .product__link span { transition: none; }
+  .btn, .pill, .filter, .product, .product__media img, .product__link .arrow, .size { transition: none; }
   .product:hover { transform: none; }
-  .ticker__track { animation: none; }
-  .ticker__viewport { overflow-x: auto; }
   .menu-sheet:not([hidden]) { animation: none; }
 }

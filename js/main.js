@@ -1,5 +1,6 @@
-/* XFOOD Store — интерактив витрины: меню-шит, фильтры каталога
-   и появление блоков при скролле. Ванильный JS, без библиотек. */
+/* XFOOD Store — интерактив витрины: меню-шит, фильтры каталога,
+   выбор размера/цвета в карточках и появление блоков при скролле.
+   Ванильный JS, без библиотек. */
 (() => {
   'use strict';
 
@@ -81,6 +82,40 @@
     });
   };
 
+  /* ----- выбор размера/цвета в карточках ----- */
+
+  /**
+   * Обновляет подпись CTA: показывает выбранный размер/цвет.
+   * @param {HTMLElement} card
+   * @returns {void}
+   */
+  const updateStockLabel = (card) => {
+    const label = card.querySelector('.product__link-label');
+    const selected = card.querySelector('.size[aria-pressed="true"]');
+    if (!label) return;
+    label.textContent = selected ? `Проверить: ${selected.textContent.trim()}` : 'Проверить остаток';
+  };
+
+  /**
+   * Делегированные клики по чипам размера/цвета —
+   * один активный чип на карточку, повторный клик снимает выбор.
+   * @returns {void}
+   */
+  const initSizeSelection = () => {
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('.size');
+      if (!button) return;
+      const card = button.closest('.product');
+      if (!card) return;
+
+      const isSelected = button.getAttribute('aria-pressed') === 'true';
+      card.querySelectorAll('.size').forEach((chip) => {
+        chip.setAttribute('aria-pressed', String(chip === button && !isSelected));
+      });
+      updateStockLabel(card);
+    });
+  };
+
   /* ----- появление блоков при скролле ----- */
 
   const initReveal = () => {
@@ -103,6 +138,7 @@
   const main = () => {
     initMenuSheet();
     initCatalogFilters();
+    initSizeSelection();
     initReveal();
   };
 
