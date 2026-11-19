@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XFOOD Store — мерч команды за додокоины</title>
+  <meta name="description" content="Внутренний магазин мерча команды XFOOD: одежда, аксессуары и мелочи за додокоины. Доставка во все пиццерии сети.">
+  <meta property="og:title" content="XFOOD Store — мерч команды за додокоины">
+  <meta property="og:description" content="Обменивай додокоины на вещи, сделанные специально для команды XFOOD.">
+  <meta name="theme-color" content="#2b1710">
+  <link rel="icon" href="assets/favicon-xfood.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<main id="top">
+
+  <!-- Герой: тёплый баннер по экрану — манифест, статистика, лента витрины -->
+  <section class="hero">
+    <header class="site-header">
+      <div class="container header__row">
+        <div class="header__group">
+          <a class="header__brand" href="#top" aria-label="XFOOD Store — на главную">
+            <img src="assets/favicon-xfood.png" alt="" width="44" height="44">
+            <span class="brand-word">XFOOD<i>*</i>STORE<i>*</i></span>
+          </a>
+          <nav class="header__nav" aria-label="Разделы">
+            <a href="#catalog">Каталог</a>
+            <a href="#collection">Коллекция</a>
+            <a href="#how">Как это работает</a>
+            <a href="#earn">Коины</a>
+          </nav>
+        </div>
+        <div class="header__actions">
+          <a class="pill pill--ghost" href="https://t.me/+0pVKkSiwLtkyM2Ey">Войти</a>
+          <a class="pill pill--solid" href="#how">Корзина</a>
+        </div>
+        <button class="header__menu" type="button" aria-expanded="false" aria-controls="menu-sheet">Меню</button>
+      </div>
+      <div class="container menu-sheet" id="menu-sheet" hidden>
+        <a href="#catalog">Каталог</a>
+        <a href="#collection">Коллекция</a>
+        <a href="#how">Как это работает</a>
+        <a href="#earn">Коины</a>
+        <a href="https://t.me/+0pVKkSiwLtkyM2Ey">Войти через Telegram</a>
+        <a href="https://vk.ru/xfoodchannel">VK команды</a>
+      </div>
+    </header>
+
+    <div class="container hero__inner">
+      <h1>Здесь коины становятся <em>любимыми вещами</em></h1>
+      <p class="hero__lead">Обменивай додокоины на одежду и&nbsp;аксессуары, сделанные специально для команды XFOOD. Заработал&nbsp;— выбрал&nbsp;— носишь.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#catalog">Выбрать мерч</a>
+        <a class="hero__ghost" href="#collection">Что нового в&nbsp;Осени&nbsp;26&nbsp;↓</a>
+      </div>
+    </div>
+
+    <div class="hero__ticker" aria-hidden="true">
+      <div class="container ticker__wrap">
+        <span class="ticker__tag">В витрине:</span>
+        <div class="ticker__viewport">
+          <div class="ticker__track">
+            <div class="ticker__group">
+              <span class="ticker__item">Футболки про смены</span>
+              <span class="ticker__item">Лонгслив «10&nbsp;лет на&nbsp;орбите»</span>
+              <span class="ticker__item">Носки Heartbeat</span>
+              <span class="ticker__item">Термокружка «Орбита»</span>
+              <span class="ticker__item">Рюкзак «Орбита»</span>
+              <span class="ticker__item">Кепка XFOOD</span>
+              <span class="ticker__item">Стикерпак 3D</span>
+              <span class="ticker__item">Чехол-авоська</span>
+              <span class="ticker__item">Напоясная сумка</span>
+            </div>
+            <div class="ticker__group">
+              <span class="ticker__item">Футболки про смены</span>
+              <span class="ticker__item">Лонгслив «10&nbsp;лет на&nbsp;орбите»</span>
+              <span class="ticker__item">Носки Heartbeat</span>
+              <span class="ticker__item">Термокружка «Орбита»</span>
+              <span class="ticker__item">Рюкзак «Орбита»</span>
+              <span class="ticker__item">Кепка XFOOD</span>
+              <span class="ticker__item">Стикерпак 3D</span>
+              <span class="ticker__item">Чехол-авоська</span>
+              <span class="ticker__item">Напоясная сумка</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Коллекция Осень 26: широкая панель с фото -->
+  <section class="collection container" id="collection" aria-labelledby="collection-title">
+    <div class="collection-panel reveal">
+      <div class="collection__body">
+        <p class="panel-tag">Новая коллекция</p>
+        <h2 class="collection__title" id="collection-title">Коллекция XFOOD&nbsp;— <em>Осень&nbsp;26</em></h2>
+        <p class="collection__note">Молочное худи, оранжевый термос и&nbsp;аромасвеча&nbsp;— уютные новинки, в&nbsp;которых осень в&nbsp;пиццерии становится теплее.</p>
+        <a class="btn" href="#catalog">Смотреть коллекцию</a>
+      </div>
+      <div class="collection__media">
+        <img src="assets/collections/autumn-26.jpg" alt="Уютные осенние новинки XFOOD: молочное худи, оранжевый термос и аромасвеча" width="1536" height="1024" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Витрина: фильтры-чипы + карточки товаров -->
+  <section class="catalog container" id="catalog" aria-labelledby="catalog-title">
+    <h2 class="section-title" id="catalog-title">Выбирай своё</h2>
+    <p class="section-lead">Вся витрина&nbsp;— за додокоины. Остатки по&nbsp;размерам проверяются после входа через Telegram.</p>
+
+    <div class="filters" role="group" aria-label="Фильтры каталога">
+      <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Всё&nbsp;<span class="filter__count">15</span></button>
+      <button class="filter" type="button" data-filter="clothes" aria-pressed="false">Одежда&nbsp;<span class="filter__count">8</span></button>
+      <button class="filter" type="button" data-filter="accessories" aria-pressed="false">Аксессуары&nbsp;<span class="filter__count">6</span></button>
+      <button class="filter" type="button" data-filter="other" aria-pressed="false">Другое&nbsp;<span class="filter__count">1</span></button>
+    </div>
+
+    <ul class="catalog__grid">
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/tshirt-sleep.webp" alt="Футболка «Пользуясь случаем, хотелось бы поспать»" width="1920" height="1280" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Футболка «Пользуясь случаем, хотелось&nbsp;бы поспать»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;700</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/tshirt-after-shift.webp" alt="Футболка «Есть ли жизнь после смены»" width="1448" height="1086" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Футболка «Есть ли жизнь после&nbsp;смены»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;700</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/tshirt-when-you-make-it.webp" alt="Футболка «Кем хочешь стать, когда вывезешь?»" width="1448" height="1086" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Футболка «Кем хочешь стать, когда&nbsp;вывезешь?»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;700</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/tshirt-delivery.webp" alt="Футболка «Доставка — это для души»" width="1280" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Футболка «Доставка&nbsp;— это для&nbsp;души»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;400</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/tshirt-team.webp" alt="Футболка XFOOD Team" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Футболка XFOOD Team</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;400</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/longsleeve-orbit.webp" alt="Лонгслив «XFOOD 10 лет на своей орбите»" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Лонгслив «XFOOD 10&nbsp;лет на&nbsp;своей орбите»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;2&nbsp;000</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li><li>XXXL</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/socks-heartbeat.webp" alt="Носки Heartbeat XFOOD" width="1440" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Носки Heartbeat XFOOD</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;700</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="clothes">
+        <div class="product__media">
+          <img src="assets/products/socks-xfood.webp" alt="Носки XFOOD" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="product__tag">Одежда</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Носки XFOOD</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;700</p>
+          <ul class="product__sizes" aria-label="Размеры">
+            <li>36–41</li><li>41–46</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/phone-strap-orbit.webp" alt="Верёвка для телефона «XFOOD 10 лет на своей орбите»" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Верёвка для телефона «XFOOD 10&nbsp;лет на&nbsp;своей орбите»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;700</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/thermo-mug-orbit.webp" alt="Термокружка «XFOOD 10 лет на своей орбите»" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Термокружка «XFOOD 10&nbsp;лет на&nbsp;своей орбите»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;400</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/backpack-orbit.webp" alt="Рюкзак «XFOOD 10 лет на своей орбите»" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Рюкзак «XFOOD 10&nbsp;лет на&nbsp;своей орбите»</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;3&nbsp;000</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/phone-string-bag.webp" alt="Чехол-авоська для телефона" width="1086" height="1448" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Чехол-авоська для телефона</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;400</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/waist-bag.webp" alt="Напоясная сумка" width="1280" height="1920" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Напоясная сумка</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;000</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="accessories">
+        <div class="product__media">
+          <img src="assets/products/cap-xfood.webp" alt="Кепка XFOOD" width="1920" height="1280" loading="lazy" decoding="async">
+          <span class="product__tag">Аксессуары</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Кепка XFOOD</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;1&nbsp;200</p>
+          <ul class="product__sizes" aria-label="Цвет">
+            <li>Жёлтая</li><li>Голубая</li>
+          </ul>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+
+      <li class="product reveal" data-cat="other">
+        <div class="product__media">
+          <img src="assets/products/stickerpack-3d.webp" alt="Стикерпак 3D-стикеров XFOOD" width="1448" height="1086" loading="lazy" decoding="async">
+          <span class="product__tag">Другое</span>
+        </div>
+        <div class="product__body">
+          <h3 class="product__title">Стикерпак 3D-стикеров XFOOD</h3>
+          <p class="product__price"><span class="coin">D</span>&nbsp;300</p>
+          <a class="product__link" href="#how">Проверить остаток&nbsp;<span aria-hidden="true">→</span></a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Как потратить: три шага -->
+  <section class="how container" id="how" aria-labelledby="how-title">
+    <h2 class="section-title" id="how-title">Как потратить додокоины</h2>
+    <p class="section-lead">Выбери товар, добавь его в&nbsp;корзину и&nbsp;получи заказ в&nbsp;ближайшем ПВЗ Яндекс Маркета к&nbsp;своей пиццерии или через управляющего.</p>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num" aria-hidden="true">01</span>
+        <h3 class="step__title">Авторизуйся через Telegram</h3>
+        <p class="step__text">Магазин открыт только для команды XFOOD&nbsp;— вход по&nbsp;рабочему Telegram.</p>
+      </li>
+      <li class="step reveal" style="--d:80ms">
+        <span class="step__num" aria-hidden="true">02</span>
+        <h3 class="step__title">Выбери мерч в&nbsp;пределах баланса</h3>
+        <p class="step__text">Додокоины начисляются за&nbsp;работу и&nbsp;активности. Проверь баланс в&nbsp;личном кабинете и&nbsp;выбери вещь.</p>
+      </li>
+      <li class="step reveal" style="--d:160ms">
+        <span class="step__num" aria-hidden="true">03</span>
+        <h3 class="step__title">Получи заказ в&nbsp;ПВЗ или у&nbsp;управляющего</h3>
+        <p class="step__text">Заказ приезжает в&nbsp;ближайший ПВЗ Яндекс Маркета к&nbsp;твоей пиццерии&nbsp;— или забери его через управляющего.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Как заработать: тёмная тёплая панель со строками наград -->
+  <section class="earn container" id="earn" aria-labelledby="earn-title">
+    <div class="earn-panel reveal">
+      <h2 class="section-title" id="earn-title">Как заработать коины</h2>
+      <p class="earn-lead">Все начисления и&nbsp;их&nbsp;причины сохраняются в&nbsp;истории личного кабинета.</p>
+      <ol class="earn__list">
+        <li class="earn-row">
+          <span class="earn-row__num" aria-hidden="true">01</span>
+          <div class="earn-row__body">
+            <h3 class="earn-row__title">Лучший сотрудник месяца</h3>
+            <p class="earn-row__text">Стань лучшим сотрудником месяца и&nbsp;получи награду.</p>
+          </div>
+          <span class="earn-row__amount"><span class="coin">D</span>&nbsp;700</span>
+        </li>
+        <li class="earn-row">
+          <span class="earn-row__num" aria-hidden="true">02</span>
+          <div class="earn-row__body">
+            <h3 class="earn-row__title">Коины за стаж</h3>
+            <p class="earn-row__text">От&nbsp;500 до&nbsp;3&nbsp;000 коинов за&nbsp;1,&nbsp;3,&nbsp;5,&nbsp;7 и&nbsp;10 лет работы в&nbsp;команде XFOOD.</p>
+          </div>
+          <span class="earn-row__amount"><span class="coin">D</span>&nbsp;500–3&nbsp;000</span>
+        </li>
+        <li class="earn-row">
+          <span class="earn-row__num" aria-hidden="true">03</span>
+          <div class="earn-row__body">
+            <h3 class="earn-row__title">Видео в&nbsp;рубрику #ВоскремемьеXFood</h3>
+            <p class="earn-row__text">Сними видео согласно правилам рубрики.</p>
+          </div>
+          <span class="earn-row__amount"><span class="coin">D</span>&nbsp;500</span>
+        </li>
+        <li class="earn-row">
+          <span class="earn-row__num" aria-hidden="true">04</span>
+          <div class="earn-row__body">
+            <h3 class="earn-row__title">Конкурсы и&nbsp;активности</h3>
+            <p class="earn-row__text">Участие в&nbsp;конкурсах и&nbsp;активностях сообществ тоже приносит коины. Следи за&nbsp;обновлениями!</p>
+          </div>
+          <span class="earn-row__amount"><span class="coin">D</span>&nbsp;✦</span>
+        </li>
+      </ol>
+      <div class="earn__pills">
+        <a class="pill pill--outline" href="https://t.me/+0pVKkSiwLtkyM2Ey">Telegram</a>
+        <a class="pill pill--outline" href="https://vk.ru/xfoodchannel">VK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Финальный призыв -->
+  <section class="cta container" aria-label="Перейти в витрину">
+    <div class="cta-panel reveal">
+      <h2>Обменяй коины на&nbsp;вещь, которую носишь с&nbsp;гордостью</h2>
+      <p>Каждая позиция витрины сделана для команды XFOOD&nbsp;— от&nbsp;футболок про&nbsp;смены до&nbsp;рюкзака «10&nbsp;лет на&nbsp;своей орбите».</p>
+      <div class="cta-actions">
+        <a class="btn" href="#catalog">Выбрать мерч</a>
+        <a class="pill pill--ghost" href="https://t.me/+0pVKkSiwLtkyM2Ey">Telegram команды</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/favicon-xfood.png" alt="" width="36" height="36">
+      <p class="footer__name">XFOOD<i>*</i>STORE<i>*</i></p>
+      <p class="footer__note">Внутренний магазин мерча команды XFOOD. Мерч для&nbsp;своих.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Разделы">
+      <a href="#catalog">Каталог</a>
+      <a href="#collection">Коллекция</a>
+      <a href="#how">Как это работает</a>
+      <a href="#earn">Коины</a>
+    </nav>
+    <div class="footer__contacts">
+      <a href="https://t.me/+0pVKkSiwLtkyM2Ey">Telegram</a>
+      <a href="https://vk.ru/xfoodchannel">VK</a>
+    </div>
+  </div>
+  <div class="container footer__legal">
+    <p>XFOOD Store · Фронт 1.44</p>
+    <a href="#top">Наверх&nbsp;↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
