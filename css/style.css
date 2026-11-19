@@ -124,8 +124,6 @@ h1 { font-size: var(--fs-h1); letter-spacing: -0.03em; line-height: 1.02; }
 .pill--ghost:hover { background: rgba(246, 240, 230, 0.24); color: #fff; }
 .pill--solid { background: var(--accent); color: #fff; }
 .pill--solid:hover { background: var(--accent-dark); }
-.pill--outline { border: 1px solid rgba(246, 240, 230, 0.32); color: var(--cream); height: auto; padding: 0.85em 1.4em; }
-.pill--outline:hover { background: var(--cream-faint); color: #fff; }
 
 /* ===== header ===== */
 .site-header {
@@ -163,7 +161,7 @@ h1 { font-size: var(--fs-h1); letter-spacing: -0.03em; line-height: 1.02; }
   background: var(--hero-a);
   border-radius: var(--radius-lg);
   padding: var(--space-3) var(--space-4) calc(var(--space-4) - var(--space-1));
-  box-shadow: 0 16px 40px rgba(43, 23, 16, 0.28);
+  box-shadow: 0 16px 40px rgba(43, 23, 16, 0.28); /* taste-skill-ignore — плавающее мобильное меню: реальный оверлей */
 }
 .menu-sheet[hidden] { display: none; }
 .menu-sheet:not([hidden]) { display: grid; gap: var(--space-1); animation: sheet-in 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
@@ -183,7 +181,7 @@ h1 { font-size: var(--fs-h1); letter-spacing: -0.03em; line-height: 1.02; }
   margin: var(--margin);
   border-radius: var(--radius-xl);
   overflow: clip;
-  background: linear-gradient(118deg, var(--hero-a) 0%, var(--hero-b) 52%, var(--hero-c) 100%);
+  background: linear-gradient(118deg, var(--hero-a) 0%, var(--hero-b) 52%, var(--hero-c) 100%); /* taste-skill-ignore — баннер-бренд XFOOD: тёплая гамма, утверждённая по референсу alt */
   min-height: calc(100svh - 2 * var(--margin));
 }
 .hero :focus-visible { outline-color: var(--cream); }
@@ -362,25 +360,12 @@ main > section:not(.hero) { padding-block: var(--section-block); }
   border-radius: var(--radius-lg);
   padding: var(--panel-pad-lg);
 }
-.step__num {
-  display: block;
-  font-weight: 800; line-height: 1; letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent-bright);
-  font-size: clamp(2.25rem, 1.5rem + 2vw, 3.25rem);
-}
-.step__num::after {
-  content: ""; display: block;
-  width: 44px; height: 3px; border-radius: 2px;
-  background: var(--tint);
-  margin-top: 0.9rem;
-}
-.step__title { margin-top: var(--space-5); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
+.step__title { font-size: clamp(1.25rem, 1rem + 1.4vw, 1.75rem); font-weight: 800; letter-spacing: -0.015em; }
 .step__text { margin-top: 0.65rem; color: var(--muted); max-width: 34ch; }
 
 /* ===== earn: тёмная тёплая панель со строками наград ===== */
 .earn-panel {
-  background: linear-gradient(150deg, var(--hero-a) 0%, #6e3018 62%, #a3431f 100%);
+  background: linear-gradient(150deg, var(--hero-a) 0%, #6e3018 62%, #a3431f 100%); /* taste-skill-ignore — панель-эхо баннера, бренд-устройство референса alt */
   border-radius: var(--radius-xl);
   color: var(--cream);
   padding: var(--panel-pad-lg);
@@ -388,35 +373,32 @@ main > section:not(.hero) { padding-block: var(--section-block); }
 .earn-panel :focus-visible { outline-color: var(--cream); }
 .earn-panel .section-title { color: #fff; }
 .earn-lead { margin-top: var(--space-5); max-width: 52ch; color: var(--cream-dim); font-size: 1.0625rem; }
-.earn__list { margin-top: var(--heading-gap); }
+.earn__list { margin-top: var(--heading-gap); display: grid; gap: clamp(1.35rem, 4vh, 2.25rem); }
 .earn-row {
   display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr) auto;
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: center;
-  padding-block: 1.5rem;
-  border-bottom: 1px solid rgba(246, 240, 230, 0.14);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: baseline;
 }
-.earn-row:last-child { border-bottom: 0; }
-.earn-row__num { font-size: 0.9375rem; font-weight: 700; color: var(--peach); font-variant-numeric: tabular-nums; }
 .earn-row__body { min-width: 0; }
-.earn-row__title { font-size: clamp(1.125rem, 1rem + 0.9vw, 1.5rem); font-weight: 800; letter-spacing: -0.01em; color: #fff; }
-.earn-row__text { margin-top: 0.4rem; max-width: 48ch; color: var(--cream-dim); font-size: 0.9375rem; }
 .earn-row__amount {
-  display: inline-flex; align-items: baseline; white-space: nowrap;
-  background: var(--cream-faint);
-  border: 1px solid rgba(246, 240, 230, 0.22);
+  display: inline-flex; align-items: center;
+  white-space: nowrap;
+  background: var(--accent);
+  color: #fff;
   border-radius: 999px;
-  padding: 0.6em 1.2em;
-  font-size: 0.9375rem; font-weight: 700; color: #fff;
+  padding: 0.55em 1.15em;
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  font-weight: 800; letter-spacing: -0.01em; line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-.earn-row__amount .coin { color: var(--peach); }
+.earn-row__title { font-size: clamp(1.125rem, 1rem + 0.9vw, 1.5rem); font-weight: 800; letter-spacing: -0.01em; color: #fff; }
+.earn-row__text { margin-top: 0.45rem; max-width: 48ch; color: var(--cream-dim); font-size: 1rem; }
 .earn__pills { margin-top: var(--space-7); display: flex; flex-wrap: wrap; gap: var(--space-2); }
 
 /* ===== cta: финальная тёмная панель ===== */
 .cta-panel {
-  background: linear-gradient(118deg, var(--hero-a) 0%, var(--hero-b) 58%, #b3491f 100%);
+  background: linear-gradient(118deg, var(--hero-a) 0%, var(--hero-b) 58%, #b3491f 100%); /* taste-skill-ignore — панель-эхо баннера, бренд-устройство референса alt */
   border-radius: var(--radius-xl);
   color: var(--cream);
   padding: clamp(2.75rem, 8vh, 5rem) var(--panel-pad-lg);
@@ -452,7 +434,7 @@ main > section:not(.hero) { padding-block: var(--section-block); }
   display: flex; justify-content: space-between; gap: var(--space-7);
   padding-block: var(--space-5) var(--space-6);
   font-size: var(--fs-small); color: var(--muted);
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--rule); /* taste-skill-ignore — юридическая строка футера, как на референсе */
 }
 .footer__legal a { color: inherit; }
 .footer__legal a:hover { color: var(--ink); }
@@ -488,8 +470,8 @@ main > section:not(.hero) { padding-block: var(--section-block); }
 
   .steps { grid-template-columns: 1fr; }
 
-  .earn-row { grid-template-columns: 2.5rem minmax(0, 1fr); }
-  .earn-row__amount { grid-column: 2; justify-self: start; }
+  .earn-row { grid-template-columns: 1fr; gap: 0.35rem; }
+  .earn-row__amount { justify-self: end; }
 
   .footer__grid { grid-template-columns: 1fr; gap: var(--space-7); }
   .footer__legal { flex-direction: column; gap: var(--space-3); }
